@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name : kuberapp
-          image: my02
+          image: pawwwel/my02:latest
           ports:
             - containerPort: 80
 
