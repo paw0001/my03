@@ -1,0 +1,22 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kuber
+  labels:
+    app : kuber
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: http-server
+  template:
+    metadata:
+      labels:
+        app: http-server   # Service will look for those PODS Labels!!!
+    spec:
+      containers:
+        - name : kuberapp
+          image: my02
+          ports:
+            - containerPort: 80
+
